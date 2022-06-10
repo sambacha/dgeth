@@ -25,7 +25,7 @@
     "build": "rimraf ./dist && yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -p tsconfig.build.json --outDir dist/esm --module ES6",
     "build:cjs": "tsc -p tsconfig.build.json --outDir dist/cjs --declaration false",
-    "build:go": "shx mk-go.sh"
+    "build:go": "cd go; bash build.sh; cd -"
   },
   "engines": {
     "node": ">=14"
