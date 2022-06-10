@@ -1,4 +1,4 @@
-module github.com/sambacha/dgeth/v2
+module github.com/sambacha/dgeth
 
 go 1.18
 
