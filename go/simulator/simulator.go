@@ -6,16 +6,16 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/sambacha/dgeth/chain"
-	"github.com/sambacha/dgeth/models"
-	"github.com/sambacha/dgeth/utils"
-	"github.com/sambacha/dgeth/utils/ref"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/sambacha/dgeth/chain"
+	"github.com/sambacha/dgeth/models"
+	"github.com/sambacha/dgeth/utils"
+	"github.com/sambacha/dgeth/utils/ref"
 )
 
 const SimulatorChainID = 1337

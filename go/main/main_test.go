@@ -7,10 +7,10 @@ import (
 	"log"
 	"testing"
 
-	"github.com/sambacha/dgeth/simulator"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/sambacha/dgeth/simulator"
 )
 
 func TestName(t *testing.T) {

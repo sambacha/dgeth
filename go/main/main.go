@@ -13,10 +13,10 @@ import (
 
 	"C"
 
-	"github.com/sambacha/dgeth/simulator"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/sambacha/dgeth/simulator"
 )
 
 type TransactionRequest struct {
@@ -60,13 +60,13 @@ func getBlockNumber(simID C.int) *C.char {
 
 //export getCode
 func getCode(simID C.int, account *C.char) *C.char {
-  sim := getSimulator(simID)
+	sim := getSimulator(simID)
 	code, err := sim.Backend.CodeAt(context.Background(), common.HexToAddress(C.GoString(account)), nil)
-  if err != nil {
+	if err != nil {
 		log.Fatal(err)
 	}
 
-  return C.CString(common.Bytes2Hex(code))
+	return C.CString(common.Bytes2Hex(code))
 }
 
 //export getChainID
