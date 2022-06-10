@@ -20,7 +20,7 @@ func TestName(t *testing.T) {
 	}
 
 	deploy(sim)
-	// HEVM Address 
+	// HEVM Address
 	address := common.HexToAddress("7109709ECfa91a80626fF3989D68f67F5b1DD12D")
 	decodeString, err := hex.DecodeString("06fdde03")
 	if err != nil {
