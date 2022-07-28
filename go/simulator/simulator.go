@@ -21,7 +21,7 @@ import (
 const SimulatorChainID = 1337
 
 type Config struct {
-	FirstAccountPrivateKey *string        // default "ee79b5f6e221356af78cf4c36f4f7885a11b67dfcc81c34d80249947330c0f82"
+	FirstAccountPrivateKey *string        // hardhat default "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 	NumAccounts            *uint64        // default 10
 	BlockGasLimit          *uint64        // default 12_500_000
 	AutomineEnabled        *bool          // default false
@@ -158,7 +158,7 @@ func (sim *Simulator) EstimateGas(ctx context.Context, msg *ethereum.CallMsg) (u
 
 func fillWithDefaults(cfg *Config) {
 	if cfg.FirstAccountPrivateKey == nil {
-		cfg.FirstAccountPrivateKey = ref.String("ee79b5f6e221356af78cf4c36f4f7885a11b67dfcc81c34d80249947330c0f82")
+		cfg.FirstAccountPrivateKey = ref.String("ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80")
 	}
 	if cfg.NumAccounts == nil {
 		cfg.NumAccounts = ref.Uint64(10)
