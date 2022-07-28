@@ -1,14 +1,14 @@
 {
   "name": "dgeth",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "",
+  "description": "Go-Ethereum Backing Provider",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sambacha/dgeth.git"
   },
   "keywords": [],
-  "author": "sam bacha",
+  "author": "SEE CONTRIBUTORS",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/sambacha/dgeth/issues"
@@ -19,9 +19,9 @@
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "prepublishOnly": "yarn build",
-    "test": "mocha",
-    "lint": "eslint '{src,test}/**/*.ts'",
-    "lint:fix": "eslint --fix '{src,test}/**/*.ts'",
+    "test": "npx mocha",
+    "lint": "npx eslint '{src,test}/**/*.ts'",
+    "lint:fix": "npx eslint --fix '{src,test}/**/*.ts'",
     "build": "rimraf ./dist && yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -p tsconfig.build.json --outDir dist/esm --module ES6",
     "build:cjs": "tsc -p tsconfig.build.json --outDir dist/cjs --declaration false",
@@ -38,7 +38,9 @@
     "@types/node": "^16",
     "@types/verror": "^1.10.5",
     "ethers": "^5.6.8",
+    "bindings": "~1.2.1",
     "ffi-napi": "^4.0.3",
+    "node-addon-api": "^4.2.0",
     "verror": "^1.10.1"
   },
   "devDependencies": {
@@ -56,8 +58,13 @@
     "process-tracing": "^1.0.2",
     "sinon": "^14.0.0",
     "sinon-chai": "^3.7.0",
-    "ts-node": "^10.8.1",
+    "ts-node": "^10.9.1",
     "typescript": "4.6.3",
-    "typescript-eslint-language-service": "^5.0.0"
-  }
+    "typescript-eslint-language-service": "^5.0.0",
+    "@ethereum-waffle/chai": "^3.4.0",
+    "@swc-node/register": "^1.4.2",
+    "@types/ffi-napi": "^4.0.4",
+    "node-gyp": "^8.4.1"
+  },
+  "gypfile": true
 }
