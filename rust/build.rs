@@ -9,16 +9,16 @@ fn main() {
 }
 
 fn c_bindgen() {
-  //let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
+
     println!("cargo:rerun-if-changed=wrapper.h");
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         
         .generate()
-        .expect("Unable to generate bindings");
+        .expect("Err.Unable to generate bindings");
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
     bindings
         .write_to_file(out_path.join("bindings.rs"))
-        .expect("Unable to write bindings");
+        .expect("Err.Unable to write bindings");
 }
