@@ -37,14 +37,18 @@
     "@types/ffi-napi": "^4.0.4",
     "@types/node": "^16",
     "@types/verror": "^1.10.5",
-    "ethers": "^5.6.8",
     "bindings": "~1.2.1",
+    "ethers": "^5.6.8",
     "ffi-napi": "^4.0.3",
     "node-addon-api": "^4.2.0",
     "verror": "^1.10.1"
   },
   "devDependencies": {
+    "@ethereum-waffle/chai": "^3.4.0",
+    "@swc-node/register": "^1.4.2",
     "@types/chai": "^4.3.1",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/ffi-napi": "^4.0.4",
     "@types/mocha": "^9.1.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
@@ -54,17 +58,14 @@
     "chai-ethers": "^0.0.1",
     "eslint": "^8.17.0",
     "mocha": "^10.0.0",
+    "node-gyp": "^8.4.1",
     "prettier": "^2.6.2",
     "process-tracing": "^1.0.2",
     "sinon": "^14.0.0",
     "sinon-chai": "^3.7.0",
     "ts-node": "^10.9.1",
     "typescript": "4.6.3",
-    "typescript-eslint-language-service": "^5.0.0",
-    "@ethereum-waffle/chai": "^3.4.0",
-    "@swc-node/register": "^1.4.2",
-    "@types/ffi-napi": "^4.0.4",
-    "node-gyp": "^8.4.1"
+    "typescript-eslint-language-service": "^5.0.0"
   },
   "gypfile": true
 }
